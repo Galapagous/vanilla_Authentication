@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="signup_left">
+            <img src="./assets/bike1.jpg" alt="bike signup">
+        </div>
+        <div class="sigup_right">
+            <h1>Register</h1>
+            <form onsubmit="handleSignup(event)" name="signUp">
+                <input name="firstName" type="text" placeholder="FirstName" required>
+                <input name="lastName" type="text" placeholder="LastName" required>
+                <input name="userame" type="text" placeholder="Username" required>
+                <input name="email" type="text" placeholder="Email" required>
+                <input name="password" type="text" placeholder="Password" required>
+                <!-- <input name="profile" type="file"> -->
+                <p>Already have an account? <a href="signin.html">Sign in</a></p>
+                <input type="submit"/>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="hero signin">
+        <div class="signin_left">
+            <img src="./assets/bike3.jpg" alt="bike signin">
+        </div>
+        <div class="sigin_right">
+            <h1>Login</h1>
+            <form onsubmit="handleSignin(event)" name="signin">
+                <input name="email" type="text" placeholder="Email" required>
+                <input name="password" type="text" placeholder="Password" required>
+                <p>Dont have an account? <a href="signup.html">Sign up</a></p>
+                <span class="error_mail">invalid Email</span>
+                <span class="error_password">invalid Password</span>
+                <input type="submit"/>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
