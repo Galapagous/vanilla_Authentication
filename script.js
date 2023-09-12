@@ -1,3 +1,11 @@
+window.addEventListener('load', ()=>{
+    let userSession = localStorage.getItem('session')
+    if(window.location.pathname === '/index.html'){
+        if(!userSession){
+            window.location = 'signup.html'
+        }
+    }
+})
 // ---------------signup page--------------
 const handleSignup = (e)=>{
     e.preventDefault()
@@ -31,6 +39,7 @@ const handleSignin = (event)=>{
     if (fetchUser){
         let passord = JSON.parse(fetchUser).password
         if(passord === userInfo.password){
+            localStorage.setItem('session', true)
             window.location = 'index.html'
         }else{
             document.querySelector('.error_password').style.display = 'inline'
@@ -39,7 +48,14 @@ const handleSignin = (event)=>{
         document.querySelector('.error_mail').style.display = 'inline'
     }
 }
-// ---------------delete account--------------
+// ---------------signOut account--------------
+const handleSignOut = ()=>{
+    localStorage.setItem('session', false)
+    console.log({ses: localStorage.getItem('session')})
+    window.location = 'signin.html'
+}
 const handleDelete = ()=>{
-    alert('This functionality has not been implemented')
+    // localStorage.setItem('session', false)
+    localStorage.clear()
+    window.location = 'signin.html'
 }
